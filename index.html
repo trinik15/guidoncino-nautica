@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impresa “Guidoncino Verde” a Venezia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2a9d8f;
+      --secondary-color: #264653;
+      --bg-color: #f4f4f9;
+      --card-bg: #fff;
+      --border-radius: 12px;
+      --transition-time: 0.3s;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--secondary-color);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1rem;
+      color: var(--secondary-color);
+      opacity: 0.8;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .video-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform var(--transition-time), box-shadow var(--transition-time);
+    }
+    .video-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .video-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 140px;
+    }
+    .video-card p {
+      margin: 0.75rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--secondary-color);
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Voga a Venezia</h1>
+    <p>Scopri i nostri video dell'impresa “Guidoncino Verde” in laguna</p>
+  </header>
+  <div class="grid">
+    <div class="video-card">
+      <a href="https://www.youtube.com/shorts/W-Iz6vbk514" target="_blank">
+        <img src="https://img.youtube.com/vi/W-Iz6vbk514/hqdefault.jpg" alt="Giro in Laguna">
+        <p>Giro in Laguna</p>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://www.youtube.com/shorts/V4lLTwH_lsg" target="_blank">
+        <img src="https://img.youtube.com/vi/V4lLTwH_lsg/hqdefault.jpg" alt="Divertimento con i piccioni">
+        <p>Divertimento con i piccioni</p>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://www.youtube.com/shorts/aKIhibG2VtM" target="_blank">
+        <img src="https://img.youtube.com/vi/aKIhibG2VtM/hqdefault.jpg" alt="Venezia di notte">
+        <p>Venezia di notte</p>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://www.youtube.com/shorts/CAtEEAQBEkI" target="_blank">
+        <img src="https://img.youtube.com/vi/CAtEEAQBEkI/hqdefault.jpg" alt="Arrivo alla Giudecca">
+        <p>Arrivo alla Giudecca</p>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://www.youtube.com/shorts/ZFTewXUsl3Q" target="_blank">
+        <img src="https://img.youtube.com/vi/ZFTewXUsl3Q/hqdefault.jpg" alt="Attraversando il canale della Giudecca">
+        <p>Attraversando la Giudecca</p>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=BIKWUTJZmhI&ab_channel=Spock" target="_blank">
+        <img src="https://img.youtube.com/vi/BIKWUTJZmhI/hqdefault.jpg" alt="Voga a Venezia parte 1">
+        <p>Voga a Venezia parte 1</p>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=lpNBLAdsdPI&ab_channel=Spock" target="_blank">
+        <img src="https://img.youtube.com/vi/lpNBLAdsdPI/hqdefault.jpg" alt="Voga a Venezia parte 2">
+        <p>Voga a Venezia parte 2</p>
+      </a>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Impresa Guidoncino Verde - Tutti i diritti riservati
+  </footer>
+</body>
+</html>
