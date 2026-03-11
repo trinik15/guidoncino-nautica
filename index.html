@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Voga a Venezia | Guidoncino Verde</title>
+<title>Guidoncino Verde | Voga a Venezia</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
 --primary:#2a9d8f;
 --dark:#1d3557;
---bg:#f6f9fc;
---card:rgba(255,255,255,0.85);
---radius:16px;
+--light:#f6f9fc;
+--radius:14px;
 }
 
 *{
@@ -29,172 +29,228 @@ box-sizing:border-box;
 
 body{
 font-family:'Poppins',sans-serif;
-background:var(--bg);
+background:var(--light);
 color:var(--dark);
-line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-weight:700;
+font-size:18px;
+color:var(--primary);
+}
+
+nav a{
+text-decoration:none;
+color:var(--dark);
+margin-left:20px;
+font-weight:500;
 }
 
 /* HERO */
 
 .hero{
-background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+height:75vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
 url("https://images.unsplash.com/photo-1505533321630-975218a5f66f");
 background-size:cover;
 background-position:center;
-padding:80px 20px;
-text-align:center;
-color:white;
+padding:20px;
 }
 
 .hero h1{
-font-size:3rem;
-font-weight:700;
+font-size:3.2rem;
 margin-bottom:10px;
 }
 
 .hero p{
-font-size:1.1rem;
+max-width:600px;
 opacity:0.9;
+margin-bottom:25px;
 }
 
-/* CONTAINER */
+.btn{
+background:var(--primary);
+color:white;
+padding:12px 26px;
+border-radius:30px;
+text-decoration:none;
+font-weight:500;
+}
 
-.container{
+/* SECTION */
+
+section{
 max-width:1100px;
 margin:auto;
-padding:40px 20px;
+padding:60px 20px;
 }
 
-/* GRID */
+.section-title{
+font-size:2rem;
+margin-bottom:25px;
+text-align:center;
+}
+
+/* ABOUT */
+
+.about{
+text-align:center;
+max-width:700px;
+margin:auto;
+font-size:1.05rem;
+opacity:0.85;
+}
+
+/* VIDEO GRID */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
+gap:25px;
+margin-top:30px;
 }
 
-/* VIDEO CARD */
-
-.video-card{
-background:var(--card);
-backdrop-filter:blur(10px);
+.card{
+background:white;
 border-radius:var(--radius);
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.12);
-transition:all .35s ease;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-.video-card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 20px 40px rgba(0,0,0,0.18);
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 28px rgba(0,0,0,0.15);
 }
 
-.video-card img{
+.card img{
 width:100%;
 height:170px;
 object-fit:cover;
-transition:transform .35s ease;
 }
 
-.video-card:hover img{
-transform:scale(1.05);
-}
-
-.video-card p{
-padding:14px 16px 18px 16px;
+.card p{
+padding:14px;
 font-weight:500;
 }
 
 /* FOOTER */
 
 footer{
+background:white;
 text-align:center;
-margin-top:50px;
-padding:25px;
+padding:30px;
 font-size:0.9rem;
 opacity:0.7;
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-.hero h1{
-font-size:2.2rem;
-}
-
+margin-top:60px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<section class="hero">
+<nav>
+<div class="logo">Guidoncino Verde</div>
+<div>
+<a href="#video">Video</a>
+<a href="#shorts">Shorts</a>
+</div>
+</nav>
+
+<header class="hero">
 <h1>Voga a Venezia</h1>
-<p>Impresa nautica “Guidoncino Verde” nella laguna veneziana</p>
+<p>Un viaggio nella laguna veneziana attraverso la tradizione della voga veneta e l'impresa nautica del Guidoncino Verde.</p>
+<a href="#video" class="btn">Guarda i video</a>
+</header>
+
+<section>
+<h2 class="section-title">L'impresa</h2>
+<p class="about">
+Durante questa esperienza abbiamo attraversato la laguna di Venezia documentando momenti
+di navigazione, esplorazione e vita veneziana. Qui puoi vedere tutti i video dell'impresa
+“Guidoncino Verde”.
+</p>
 </section>
 
-<div class="container">
+<section id="video">
+
+<h2 class="section-title">Video principali</h2>
 
 <div class="grid">
 
-<div class="video-card">
-<a href="https://www.youtube.com/shorts/W-Iz6vbk514" target="_blank">
+<a class="card" href="https://www.youtube.com/watch?v=BIKWUTJZmhI" target="_blank">
+<img src="https://img.youtube.com/vi/BIKWUTJZmhI/hqdefault.jpg">
+<p>Voga a Venezia — Parte 1</p>
+</a>
+
+<a class="card" href="https://www.youtube.com/watch?v=lpNBLAdsdPI" target="_blank">
+<img src="https://img.youtube.com/vi/lpNBLAdsdPI/hqdefault.jpg">
+<p>Voga a Venezia — Parte 2</p>
+</a>
+
+</div>
+
+</section>
+
+<section id="shorts">
+
+<h2 class="section-title">Shorts</h2>
+
+<div class="grid">
+
+<a class="card" href="https://www.youtube.com/shorts/W-Iz6vbk514" target="_blank">
 <img src="https://img.youtube.com/vi/W-Iz6vbk514/hqdefault.jpg">
 <p>Giro in Laguna</p>
 </a>
-</div>
 
-<div class="video-card">
-<a href="https://www.youtube.com/shorts/V4lLTwH_lsg" target="_blank">
+<a class="card" href="https://www.youtube.com/shorts/V4lLTwH_lsg" target="_blank">
 <img src="https://img.youtube.com/vi/V4lLTwH_lsg/hqdefault.jpg">
 <p>Divertimento con i piccioni</p>
 </a>
-</div>
 
-<div class="video-card">
-<a href="https://www.youtube.com/shorts/aKIhibG2VtM" target="_blank">
+<a class="card" href="https://www.youtube.com/shorts/aKIhibG2VtM" target="_blank">
 <img src="https://img.youtube.com/vi/aKIhibG2VtM/hqdefault.jpg">
 <p>Venezia di notte</p>
 </a>
-</div>
 
-<div class="video-card">
-<a href="https://www.youtube.com/shorts/CAtEEAQBEkI" target="_blank">
+<a class="card" href="https://www.youtube.com/shorts/CAtEEAQBEkI" target="_blank">
 <img src="https://img.youtube.com/vi/CAtEEAQBEkI/hqdefault.jpg">
 <p>Arrivo alla Giudecca</p>
 </a>
-</div>
 
-<div class="video-card">
-<a href="https://www.youtube.com/shorts/ZFTewXUsl3Q" target="_blank">
+<a class="card" href="https://www.youtube.com/shorts/ZFTewXUsl3Q" target="_blank">
 <img src="https://img.youtube.com/vi/ZFTewXUsl3Q/hqdefault.jpg">
 <p>Attraversando la Giudecca</p>
 </a>
-</div>
-
-<div class="video-card">
-<a href="https://www.youtube.com/watch?v=BIKWUTJZmhI" target="_blank">
-<img src="https://img.youtube.com/vi/BIKWUTJZmhI/hqdefault.jpg">
-<p>Voga a Venezia – Parte 1</p>
-</a>
-</div>
-
-<div class="video-card">
-<a href="https://www.youtube.com/watch?v=lpNBLAdsdPI" target="_blank">
-<img src="https://img.youtube.com/vi/lpNBLAdsdPI/hqdefault.jpg">
-<p>Voga a Venezia – Parte 2</p>
-</a>
-</div>
 
 </div>
 
-</div>
+</section>
 
 <footer>
-© 2025 Impresa Guidoncino Verde
+© 2025 Guidoncino Verde — Impresa nautica a Venezia
 </footer>
 
 </body>
